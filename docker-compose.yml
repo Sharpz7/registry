@@ -19,7 +19,6 @@ services:
 volumes:
   docker_data:
 
-
 networks:
     default:
         external:
