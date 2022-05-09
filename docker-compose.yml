@@ -5,11 +5,11 @@ services:
     hostname: registry
     image: sharp6292/mcadesigns-registry:latest
     environment:
-      REGISTRY_AUTH: htpasswd
-      REGISTRY_AUTH_HTPASSWD_REALM: Registry
-      REGISTRY_AUTH_HTPASSWD_PATH: /auth/registry.password
-      PASS: ${DOCKER_PASS?err}
-      REGISTRY_STORAGE_DELETE_ENABLED: true
+      - REGISTRY_AUTH=htpasswd
+      - REGISTRY_AUTH_HTPASSWD_REALM=Registry
+      - REGISTRY_AUTH_HTPASSWD_PATH=/auth/registry.password
+      - PASS=${DOCKER_PASS?err}
+      - REGISTRY_STORAGE_DELETE_ENABLED=true
 
     restart: always
 
