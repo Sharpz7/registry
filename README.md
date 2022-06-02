@@ -8,22 +8,7 @@ A private docker registry installation using [SharpNet](https://github.com/Sharp
 
 # Installation
 
-- Make sure [SharpCD](https://github.com/Sharpz7/sharpcd) and [SharpNet](https://github.com/Sharpz7/sharpnet) have been installed.
-
-- Create a sharpcd.yml file like the following:
-
-```yml
-version: 1
-
-tasks:
-  registery_task:
-    name: Registery Server
-    envfile: .env
-    type: docker
-    sharpurl: https://mydomain.com:5666
-    giturl: https://raw.githubusercontent.com/Sharpz7/
-    compose: /registry/main/docker-compose.yml
-```
+- Make sure [SharpCD](https://github.com/Sharpz7/sharpcd) havs been installed.
 
 - Ensure the enviromental variables have been set in an enviromental variable file:
 
@@ -31,15 +16,13 @@ tasks:
 DOCKER_PASS=docker_password
 ```
 
-- Run `sharpcd` to get started!
+- Run the following command to install the registry:
 
+```bash
+sharpcd --remotefile https://raw.githubusercontent.com/Sharpz7/registry/main/.sharpcd/sharpcd.yml
+```
 
 ## Maintainers
 
 - [Adam McArthur](https://adam.mcaq.me)
-
-## TODO
-
-- Remove sharpnet domain and replace to Env var
-- Remove username in docker.sh replace with username var
 

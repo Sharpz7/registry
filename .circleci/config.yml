@@ -16,6 +16,7 @@ jobs:
           name: "Setup Env"
           command: |
             echo "DOCKER_PASS=${DOCKER_PASS}" > .env
+            echo "DOCKER_USER=${DOCKER_USER}" > .env
 
       - sharpcd/deploy
 
