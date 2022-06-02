@@ -14,6 +14,8 @@ A private docker registry installation using [SharpNet](https://github.com/Sharp
 
 ```env
 DOCKER_PASS=docker_password
+DOCKER_USER=docker_user
+SHARPDOMAINS=domain1.com,domain2.com
 ```
 
 - Run the following command to install the registry:
