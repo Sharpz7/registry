@@ -13,20 +13,33 @@ A private docker registry installation using [SharpNet](https://github.com/Sharp
 - Ensure the enviromental variables have been set in an enviromental variable file:
 
 ```env
-# registry enviromental variables
+# docker login for private registry
 DOCKER_PASS=docker_password
 DOCKER_USER=docker_user
+
+# domains that will be used for the private registry
 SHARPDOMAINS=domain1.com,domain2.com
 
-# sharpnet enviromental variables
+#=============================
+
+# sharpnet ports
 HTTP_PORT=80
 HTTPS_PORT=443
+
+# Sharpnet gmail login credentials
+# for sending errors
+MAILPASS=email_password
+SENDER_EMAIL=email
+
+# Email that problems will be sent to
+RECEIVER_EMAIL=email@domain1.com
+
+# Domain for certificates
+DOMAIN=domain2.com
+
+# For Devs only
 DEV=FALSE
 NETWORK=sharpnet
-MAILPASS=mail_password (gmail only)
-SENDER_EMAIL=email
-RECEIVER_EMAIL=email@domain1.com
-DOMAIN=domain2.com
 ```
 
 **(See the [sharpnet](https://github.com/Sharpz7/sharpnet) documentation for more information)**
