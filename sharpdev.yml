@@ -1,0 +1,6 @@
+version: 1
+envfile: .env
+
+scripts:
+  setup: sudo apt install speedtest-cli
+  write: speedtest-cli
